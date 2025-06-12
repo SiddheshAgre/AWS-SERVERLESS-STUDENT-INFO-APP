@@ -1,4 +1,4 @@
-# 🧑‍🎓 AWS Serverless Student Info App
+#  AWS Serverless Student Info App
 
 This is a simple serverless web application built using AWS services that allows you to:
 
