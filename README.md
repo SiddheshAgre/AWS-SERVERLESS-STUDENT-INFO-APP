@@ -1,37 +1,33 @@
-# Student Info Cloud App 🚀
+# 🎓 AWS Serverless Student Info App
 
-A simple AWS-powered web application to collect and view student data using a serverless architecture.
+This is a simple **serverless web app** built using AWS services that lets users **add and retrieve student information** via a form hosted on an S3 website. It follows a clean and scalable cloud architecture using fully managed AWS services.
 
-## 🛠 Tech Stack
+---
+
+## 🧰 Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** AWS Lambda (Python)
-- **API Gateway:** Handles POST/GET HTTP requests
-- **Database:** DynamoDB
-- **Hosting:** Amazon S3 (static website hosting)
+- **API Gateway:** REST API trigger for Lambda
+- **Database:** DynamoDB (On-Demand mode)
+- **Hosting:** Amazon S3 (Static Website)
+- **Permissions:** IAM Roles with Least Privilege
 
-## 📦 Features
+---
 
-- Collects student details (name, roll number, etc.)
-- Sends data to Lambda via API Gateway
-- Stores and retrieves data from DynamoDB
-- Displays stored student data on the webpage
+## 🔄 Workflow
 
-## 🔧 AWS Services Used
+1. User submits student data from a web form (`index.html`)
+2. JS sends a POST request via API Gateway to a Lambda function
+3. Lambda stores the data in DynamoDB
+4. A GET request retrieves and displays student data
 
-| Service        | Purpose                           |
-|----------------|-----------------------------------|
-| S3             | Host static website               |
-| API Gateway    | REST API to trigger Lambda        |
-| Lambda         | Handle POST/GET logic             |
-| DynamoDB       | Store student data (NoSQL table)  |
-| IAM            | Permissions for Lambda/API access |
+---
 
 ## 💸 Cost Optimization
 
-- **On-Demand DynamoDB:** No auto-scaling costs
-- **Free-tier usage:** Fully deployable with zero billing if idle
-- **No running EC2 or containers**
-
+- ✅ **DynamoDB On-Demand** (no auto-scaling, no charge if idle)
+- ✅ **S3 Static Hosting** (free-tier eligible)
+- ✅ **No EC2 / No VPC** used — completely **serverless & event-driven**
 
 
